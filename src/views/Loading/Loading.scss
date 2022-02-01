@@ -1,0 +1,92 @@
+#preload {
+  position: fixed;
+  background-color: #111;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  #logo_preload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-image: url("../../assets/Logo_QCHE_biale.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    #mask {
+      z-index: 1000;
+      position: absolute;
+      background: #111;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  #bars {
+    position: absolute;
+    z-index: 1020;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    .bar {
+      height: 20vh;
+      background: #fff;
+      position: absolute;
+      width: 0;
+      left: 0;
+    }
+    #bar1 {
+      top: 0%;
+    }
+    #bar2 {
+      top: 20%;
+    }
+    #bar3 {
+      top: 40%;
+    }
+    #bar4 {
+      top: 60%;
+    }
+    #bar5 {
+      top: 80%;
+    }
+  }
+}
+
+.site-header {
+  background-color: #fff;
+  display: flex;
+  height: 87px;
+  width: 100%;
+  align-items: center;
+  -ms-align-items: center;
+  z-index: 998;
+}
+.main-navigation {
+  clear: both;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  li {
+    float: left;
+    position: relative;
+    width: 100px;
+    text-align: center;
+  }
+}
+.menu-toggle {
+  background-color: #111111;
+  border-radius: 50%;
+  height: 48px;
+  margin-right: 48px;
+  padding: 0;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  width: 48px;
+}

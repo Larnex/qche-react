@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.scss";
+import ParticlesComponent from "./Particles";
+import useLocomotiveScroll from "./utils/hooks/useLocomotiveScroll";
+import HomePage from "./views/Home/HomePage/HomePage";
+import Loading from "./views/Loading/Loading";
 
-function App() {
+const App = () => {
+  const [isLoading, setLoading] = useState(false);
+
+  window.onload = () => setLoading(true);
+
+  useLocomotiveScroll(!isLoading);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Loading /> */}
+
+      <div id="main" data-scroll-container data-scroll-direction="horizontal">
+        <ParticlesComponent></ParticlesComponent>
+        <HomePage />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
