@@ -4,6 +4,8 @@ import ParticlesComponent from "./Particles";
 import useLocomotiveScroll from "./utils/hooks/useLocomotiveScroll";
 import HomePage from "./views/Home/HomePage/HomePage";
 import Loading from "./views/Loading/Loading";
+import Navbar from "./views/Navbar/Navbar";
+import HomeGallery from "./views/Home/HomeGallery/HomeGallery";
 
 const App = () => {
   const [isLoading, setLoading] = useState(false);
@@ -15,9 +17,9 @@ const App = () => {
   return (
     <div>
       {/* <Loading /> */}
-
-      <div id="main" data-scroll-container data-scroll-direction="horizontal">
-        <ParticlesComponent></ParticlesComponent>
+      {/* <Navbar /> */}
+      <div>
+        {/* <ParticlesComponent></ParticlesComponent> */}
         <HomePage />
       </div>
     </div>

@@ -10,7 +10,7 @@ const useLocoScroll = (start) => {
   useEffect(() => {
     if (!start) return;
 
-    const scrollEl = document.querySelector("#main");
+    const scrollEl = document.querySelector("#horizontal");
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -25,8 +25,7 @@ const useLocoScroll = (start) => {
     locoScroll.on("scroll", (obj) => {
       let widthToProgress = gsap.utils.mapRange(0, obj.limit.x, 0, 100);
       let howMuchScrolled = widthToProgress(obj.scroll.x);
-      console.log("howMuchScrolled:", howMuchScrolled);
-      progressBar.style.width = `${howMuchScrolled / 2}%`;
+      progressBar.style.width = `${howMuchScrolled / 3}%`;
 
       ScrollTrigger.update();
     });
@@ -34,7 +33,6 @@ const useLocoScroll = (start) => {
 
     ScrollTrigger.scrollerProxy(scrollEl, {
       scrollTop(value) {
-        console.log("value:", value);
         return arguments.length
           ? locoScroll.scrollTo(value, 0, 0)
           : locoScroll.scroll.instance.scroll.y;
