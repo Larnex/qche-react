@@ -5,6 +5,9 @@
   height: 100%;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
   #logo_preload {
     position: absolute;
     width: 100%;
@@ -16,7 +19,6 @@
     background-repeat: no-repeat;
     background-position: center;
     #mask {
-      z-index: 1000;
       position: absolute;
       background: #111;
       top: 0;
@@ -27,13 +29,12 @@
   }
   #bars {
     position: absolute;
-    z-index: 1020;
     width: 100%;
     height: 100%;
     opacity: 0;
     .bar {
       height: 20vh;
-      background: #fff;
+      background: transparent;
       position: absolute;
       width: 0;
       left: 0;
@@ -56,37 +57,36 @@
   }
 }
 
-.site-header {
-  background-color: #fff;
-  display: flex;
-  height: 87px;
-  width: 100%;
-  align-items: center;
-  -ms-align-items: center;
-  z-index: 998;
-}
-.main-navigation {
-  clear: both;
-  display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  li {
-    float: left;
-    position: relative;
-    width: 100px;
-    text-align: center;
-  }
-}
-.menu-toggle {
-  background-color: #111111;
-  border-radius: 50%;
-  height: 48px;
-  margin-right: 48px;
-  padding: 0;
-  transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  width: 48px;
-}
+// .site-header {
+//   background-color: #fff;
+//   display: flex;
+//   height: 87px;
+//   width: 100%;
+//   align-items: center;
+//   -ms-align-items: center;
+// }
+// .main-navigation {
+//   clear: both;
+//   display: flex;
+//   justify-content: flex-end;
+//   margin-left: auto;
+//   list-style: none;
+//   margin: 0;
+//   padding-left: 0;
+//   li {
+//     float: left;
+//     position: relative;
+//     width: 100px;
+//     text-align: center;
+//   }
+// }
+// .menu-toggle {
+//   background-color: #111111;
+//   border-radius: 50%;
+//   height: 48px;
+//   margin-right: 48px;
+//   padding: 0;
+//   transition: background-color 0.5s;
+//   -webkit-transition: background-color 0.5s;
+//   width: 48px;
+// }

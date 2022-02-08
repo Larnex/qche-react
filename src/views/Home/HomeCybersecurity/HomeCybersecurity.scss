@@ -1,0 +1,25 @@
+.slide--4 {
+  .slide__content {
+    position: absolute;
+    top: 10%;
+    height: 100%;
+    width: 85%;
+
+    .slide__title {
+      font-size: 4vw;
+      line-height: 1.2;
+    }
+
+    .slide__text {
+      position: relative;
+      text-align: justify;
+      z-index: 1;
+      left: 7.5vw;
+      top: 40%;
+
+      p {
+        font-size: 1.25vw;
+      }
+    }
+  }
+}

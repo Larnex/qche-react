@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeIntro = (props) => {
   return (
-    <section className="slide slide--1 js-slide" data-scroll-section>
+    <section className="slide slide--1 js-slide item" id="section0">
       <div className="slide__inner">
         <h1 className="slide__title">
           <div className="js-transition-title">Quantum is the future,</div>
@@ -14,10 +14,6 @@ const HomeIntro = (props) => {
           </figure>
         </div>
       </div>
-
-      {/* <div className="slide__inner">
-        <div className="slide__img slide__img--proxy"></div>
-      </div> */}
     </section>
   );
 };

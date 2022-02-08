@@ -16,8 +16,12 @@ const App = () => {
 
   return (
     <div>
-      {/* <Loading /> */}
-      {/* <Navbar /> */}
+      <div>{/* <Loading></Loading> */}</div>
+
+      <div>
+        <Navbar></Navbar>
+      </div>
+
       <div>
         {/* <ParticlesComponent></ParticlesComponent> */}
         <HomePage />

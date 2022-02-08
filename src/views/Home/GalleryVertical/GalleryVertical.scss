@@ -1,0 +1,47 @@
+.grid-column-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+
+  h1 {
+    text-align: center;
+  }
+
+  figure {
+    position: relative;
+    z-index: 1;
+
+    img {
+      margin: 0 auto;
+      height: auto;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    .img-1 {
+      width: 40%;
+    }
+
+    .img-2 {
+      width: 40%;
+    }
+
+    .img-3 {
+      width: 45%;
+    }
+
+    figcaption {
+      margin: 0 auto;
+      margin-top: 15px;
+      font-size: 1.25vw;
+      position: relative;
+      left: 30%;
+      text-align: start;
+    }
+  }
+}

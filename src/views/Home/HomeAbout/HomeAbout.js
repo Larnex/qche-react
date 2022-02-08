@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeAbout = (props) => {
   return (
-    <section className="slide slide--2 js-slide" data-scroll-section>
+    <section className="slide slide--2 js-slide item" id="section1">
       <div className="slide__inner">
         <div className="slide__content">
           <h1 className="slide__title js-transition-title">Nasza Misja</h1>
