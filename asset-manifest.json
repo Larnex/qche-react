@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f623103.css",
+    "main.js": "/static/js/main.9d573266.js",
+    "static/media/m_pawlowski.jpg": "/static/media/m_pawlowski.66c771022d1120928d22.jpg",
+    "static/media/Sebastian3.jpg": "/static/media/Sebastian3.8f0fe891f50e3ef3d7d0.jpg",
+    "static/media/Główna_grafika_quantum.png": "/static/media/Główna_grafika_quantum.31d8b8669d094cfb8f08.png",
+    "static/media/s_wienmann.jpg": "/static/media/s_wienmann.d45c35753d9bdb1a72ac.jpg",
+    "static/media/oliver.jpg": "/static/media/oliver.110293dec34e092c8c80.jpg",
+    "static/media/mapa.png": "/static/media/mapa.2a4996b2c5e2d2fb3c4b.png",
+    "static/media/m_wierzbowski.jpg": "/static/media/m_wierzbowski.384672bdc62f2dfcbf57.jpg",
+    "static/media/UG_logo_RGB_sygnet_negatyw_biały.png": "/static/media/UG_logo_RGB_sygnet_negatyw_biały.b86642e594dfbc34885e.png",
+    "static/media/Logo_QCHE_czerwone.png": "/static/media/Logo_QCHE_czerwone.60bc332789fdf6e897c5.png",
+    "index.html": "/index.html",
+    "main.2f623103.css.map": "/static/css/main.2f623103.css.map",
+    "main.9d573266.js.map": "/static/js/main.9d573266.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f623103.css",
+    "static/js/main.9d573266.js"
+  ]
+}
