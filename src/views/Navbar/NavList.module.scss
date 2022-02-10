@@ -43,6 +43,7 @@
     text-transform: uppercase;
     margin: 15px;
     text-decoration: none;
+    height: 35px;
 
     @include media-query($large-up) {
       font-size: 0.9vw;

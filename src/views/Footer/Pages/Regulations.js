@@ -2,11 +2,15 @@ import React, { useEffect } from "react";
 import FooterNavbar from "../Navbar/FooterNavbar";
 import "./Rodo.scss";
 import BgFooter from "../BgFooter";
+import Progress from "../../Progress";
+import useScrollProgress from "../../../utils/hooks/useScrollProgress";
 
 export const Regulations = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useScrollProgress(true);
 
   return (
     <div>
@@ -506,6 +510,7 @@ export const Regulations = () => {
         </div>
         <BgFooter></BgFooter>
       </section>
+      <Progress></Progress>
     </div>
   );
 };

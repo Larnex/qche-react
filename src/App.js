@@ -8,14 +8,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "./Container";
 import { Regulations } from "./views/Footer/Pages/Regulations";
 import Logo from "./assets/Logo_QCHE_czerwone.png";
-import ScrollToTop from "./utils/ScrollToTop";
+import Note from "./views/Footer/Pages/Note";
 
 const App = () => {
   return (
     <div>
       <div>
         <BrowserRouter>
-          {/* <ScrollToTop></ScrollToTop> */}
           <Routes>
             <Route
               path="/"
@@ -31,6 +30,7 @@ const App = () => {
               path="/polityka-prywatnosci"
               element={<PrivatePolicy />}
             ></Route>
+            <Route path="/nota-fundacji" element={<Note />}></Route>
           </Routes>
           <Footer bg={bg}></Footer>
         </BrowserRouter>

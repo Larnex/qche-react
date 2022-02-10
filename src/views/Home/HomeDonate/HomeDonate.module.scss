@@ -1,0 +1,29 @@
+@import "../../../styles/config/config.scss";
+.subtitle {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 500px) {
+    font-size: 13px;
+  }
+
+  @include media-query($small) {
+    font-size: 4vw;
+  }
+
+  @include media-query($medium-up) {
+    font-size: 3.5vw;
+  }
+
+  @include media-query($large-up) {
+    font-size: 2vw;
+  }
+
+  @include media-query($widescreen) {
+    font-size: 1.5vw;
+  }
+}

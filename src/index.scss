@@ -37,13 +37,15 @@ progress {
   position: fixed;
   bottom: 10%;
   left: 0;
+  right: 0;
   -webkit-appearance: none;
   appearance: none;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   height: 3px;
   border: none;
   background: grey;
-  z-index: 2;
+  z-index: 999;
 }
 progress::-webkit-progress-bar {
   background: grey;

@@ -45,13 +45,13 @@
 
   @include media-query($large-up) {
     img {
-      max-width: 55%;
+      max-width: 50%;
     }
   }
 
   @include media-query($widescreen) {
     img {
-      max-width: 45%;
+      max-width: 40%;
     }
   }
 

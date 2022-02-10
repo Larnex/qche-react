@@ -12,6 +12,8 @@ import HomeDonate from "../HomeDonate/HomeDonate";
 import HomeContact from "../HomeContact/HomeContact";
 import Loading from "../../Loading/Loading";
 import useLoading from "../../../utils/hooks/useLoading";
+import Progress from "../../Progress";
+import useScrollProgress from "../../../utils/hooks/useScrollProgress";
 
 const HomePage = (props) => {
   let styles = {
@@ -25,6 +27,8 @@ const HomePage = (props) => {
   const [isLoading, setLoading] = useState(false);
 
   window.onload = () => setLoading(true);
+
+  useScrollProgress(true);
 
   useLoading(!isLoading);
 
@@ -57,9 +61,8 @@ const HomePage = (props) => {
             </div>
           </div>
         </section>
-
-        <progress max="100" value="0"></progress>
       </main>
+      <Progress />
     </div>
   );
 };

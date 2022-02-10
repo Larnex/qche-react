@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import useScrollProgress from "../../../utils/hooks/useScrollProgress";
+import Progress from "../../Progress";
 import FooterNavbar from "../Navbar/FooterNavbar";
 import "./Rodo.scss";
 
@@ -6,6 +8,8 @@ const PrivatePolicy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useScrollProgress(true);
 
   return (
     <div>
@@ -853,6 +857,7 @@ const PrivatePolicy = () => {
           </div>
         </div>
       </section>
+      <Progress></Progress>
     </div>
   );
 };

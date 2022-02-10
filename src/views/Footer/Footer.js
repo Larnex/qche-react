@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = (props) => {
   return (
@@ -8,15 +8,22 @@ const Footer = (props) => {
       <span>
         <Link to="/"> @QCHE 2022</Link>
       </span>
+      <span>|</span>
       <span>
-        <Link to="/">Nota fundacji</Link>
+        <Link to="/nota-fundacji">Nota fundacji</Link>
       </span>
+      <span>|</span>
+
       <span>
         <Link to="/rodo">RODO</Link>
       </span>
+      <span>|</span>
+
       <span>
         <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
       </span>
+      <span>|</span>
+
       <span>
         <Link to="/regulamin">Regulamin</Link>
       </span>

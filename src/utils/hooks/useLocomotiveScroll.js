@@ -80,9 +80,17 @@ const useLocoScroll = (start) => {
           if (i !== 0) {
             gsap.to(navLinks, {
               scale: 1,
+              duration: 0.2,
               borderBottom: "none",
             });
-            gsap.to(navLinks[i < 2 ? i : i - 1], {
+            gsap.to(navLinks[i < 3 ? i : i - 1], {
+              duration: 0.2,
+              scale: 1.1,
+              borderBottom: "3px solid red",
+            });
+          } else {
+            gsap.to(navLinks[i], {
+              duration: 0.2,
               scale: 1.1,
               borderBottom: "3px solid red",
             });
@@ -90,11 +98,24 @@ const useLocoScroll = (start) => {
         },
         onEnterBack: () => {
           if (i !== 0) {
-            gsap.to(navLinks, { scale: 1, borderBottom: "none" });
-            gsap.to(navLinks[i - 1], {
+            gsap.to(navLinks[i < 3 ? i + 1 : i], {
+              scale: 1,
+              borderBottom: "none",
+            });
+
+            gsap.to(navLinks[i < 3 ? i : i - 1], {
+              duration: 0.2,
               scale: 1.1,
               borderBottom: "3px solid red",
             });
+          } else {
+            gsap.to(navLinks[i], {
+              duration: 0.2,
+              scale: 1.1,
+              borderBottom: "3px solid red",
+            });
+
+            gsap.to(navLinks[i + 1], { scale: 1, borderBottom: "none" });
           }
         },
       });
@@ -104,15 +125,13 @@ const useLocoScroll = (start) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const navLink = e.target;
+        // navLinks.forEach((val, j) => {
+        //   if (j === i) return;
 
-        navLinks.forEach((val, j) => {
-          if (j === i) return;
+        //   navLinks[j].style.borderBottom = "none";
+        // });
 
-          navLinks[j].style.borderBottom = "none";
-        });
-
-        navLink.style.borderBottom = "3px solid red";
+        // navLink.style.borderBottom = "3px solid red";
 
         gsap.to(window, {
           duration: 1,
@@ -132,6 +151,8 @@ const useLocoScroll = (start) => {
         }
       });
     });
+
+    if (!start) return;
 
     gsap.to("progress", {
       value: 100,
