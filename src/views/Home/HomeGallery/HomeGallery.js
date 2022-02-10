@@ -1,58 +1,56 @@
 import React from "react";
+import "./HomeGallery.scss";
 import SZimnol from "../../../assets/zdj/Sebastian3.jpg";
 import MPawlowski from "../../../assets/zdj/m_pawlowski.jpg";
 
 const HomeGallery = (props) => {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const sections = gsap.utils.toArray(".gallery-card");
-  //     console.log("galleryRef:", galleryRef.current.offsetHeight);
-
-  //     gsap.to(sections, {
-  //       yPercent: 10,
-  //       ease: "none",
-  //       duration: 3,
-  //       scrollTrigger: {
-  //         trigger: galleryRef.current,
-  //         pin: true,
-  //         scrub: true,
-  //         markers: true,
-  //         end: `+=${galleryRef.offsetHeight}`,
-  //       },
-  //     });
-
-  //     ScrollTrigger.refresh();
-
-  //     console.log(galleryRef, sections);
-  //   });
-  // });
-
   return (
     <section className="slide slide--3 js-slide item" id="section2">
-      <div className="slide__inner grid">
-        <div className="slide__title--container">
-          <h1 className="slide__title">ZESPÓŁ FUNDACJI</h1>
-        </div>
-        <div className="grid__img">
-          <figure>
-            <img src={SZimnol} alt="S.Zimnol" className="img img-1"></img>
-            <figcaption>
-              Sebastian Zimnol <br />
-              Założyciel i Prezes Zarządu Fundacji
-              <br />
-              WETOG PL
-            </figcaption>
-          </figure>
+      <div className="slide__inner">
+        <div className="slide__content">
+          <div className="slide__relative--container">
+            {/* <div className="slide__title--container"> */}
 
-          <figure>
-            <img src={MPawlowski} alt="M.Pawlowski" className="img img-2"></img>
-            <figcaption>
-              dr hab. Marcin Pawłowski <br /> Wiceprezes Zarządu Fundacji <br />
-              Uniwersytet Gdański
-            </figcaption>
-          </figure>
-        </div>
+            <div className="slide__text">
+              <h1>ZESPÓŁ FUNDACJI</h1>
+              <p>
+                To grupa pasjonatów i wizjonerów, która składa się z prezesów
+                firm założycielskich, ale także z naukowców, badaczy i
+                specjalistów z zakresu cyberbezpieczeństwa standardowego oraz
+                kwantowego. Członkowie Zarządu ściśle współpracują, dokładając
+                wszelkich starań, aby połączyć biznes z dziedziną nowych
+                technologii kwantowych w zakresie cyberbezpieczeństwa. Celem ich
+                działania jest komercjalizacja wyników badań i wdrażanie ich do
+                gospodarki.
+              </p>
+            </div>
+            {/* </div> */}
+            <div className="grid__img">
+              <figure className="img__cont-1 img__cont">
+                <img src={SZimnol} alt="S.Zimnol" className="img img-1"></img>
+                <figcaption>
+                  Sebastian Zimnol <br />
+                  Założyciel i Prezes Zarządu Fundacji
+                  <br />
+                  WETOG PL
+                </figcaption>
+              </figure>
 
+              <figure className="img__cont-1 img__cont">
+                <img
+                  src={MPawlowski}
+                  alt="M.Pawlowski"
+                  className="img img-2"
+                ></img>
+                <figcaption>
+                  dr hab. Marcin Pawłowski <br /> Wiceprezes Zarządu Fundacji{" "}
+                  <br />
+                  Uniwersytet Gdański
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
         {/* <h1 className="slide__title">
           <div className="js-transition-title">Quantum is the future,</div>
           <div className="js-transition-title">the future starts today</div>

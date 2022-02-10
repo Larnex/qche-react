@@ -1,30 +1,39 @@
-import { useState } from "react";
+import React from "react";
 import "./App.scss";
-import ParticlesComponent from "./Particles";
-import useLocomotiveScroll from "./utils/hooks/useLocomotiveScroll";
-import HomePage from "./views/Home/HomePage/HomePage";
-import Loading from "./views/Loading/Loading";
-import Navbar from "./views/Navbar/Navbar";
-import HomeGallery from "./views/Home/HomeGallery/HomeGallery";
+import Footer from "./views/Footer/Footer";
+import bg from "./assets/Główna_grafika_quantum.png";
+import { Rodo } from "./views/Footer/Pages/Rodo";
+import PrivatePolicy from "./views/Footer/Pages/PrivatePolicy";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Container from "./Container";
+import { Regulations } from "./views/Footer/Pages/Regulations";
+import Logo from "./assets/Logo_QCHE_czerwone.png";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const App = () => {
-  const [isLoading, setLoading] = useState(false);
-
-  window.onload = () => setLoading(true);
-
-  useLocomotiveScroll(!isLoading);
-
   return (
     <div>
-      <div>{/* <Loading></Loading> */}</div>
-
       <div>
-        <Navbar></Navbar>
-      </div>
+        <BrowserRouter>
+          {/* <ScrollToTop></ScrollToTop> */}
+          <Routes>
+            <Route
+              path="/"
+              element={<Container logo={Logo} img={bg} />}
+            ></Route>
+            <Route path="/rodo" element={<Rodo></Rodo>}></Route>
+            <Route
+              path="/regulamin"
+              element={<Regulations></Regulations>}
+            ></Route>
 
-      <div>
-        {/* <ParticlesComponent></ParticlesComponent> */}
-        <HomePage />
+            <Route
+              path="/polityka-prywatnosci"
+              element={<PrivatePolicy />}
+            ></Route>
+          </Routes>
+          <Footer bg={bg}></Footer>
+        </BrowserRouter>
       </div>
     </div>
   );

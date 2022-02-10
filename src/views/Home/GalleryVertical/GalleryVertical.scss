@@ -1,15 +1,58 @@
+@import "../../../styles/config/config.scss";
+
 .grid-column-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  place-items: center;
+  // place-items: center;
   height: 100%;
   width: 100%;
+  padding-left: 7.5vw;
 
-  h1 {
-    text-align: center;
+  figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media-query($medium-up) {
+      align-items: start;
+    }
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(240px, 1fr));
+    margin-top: 100px;
+    row-gap: 75px;
+
+    img {
+      max-width: 30%;
+    }
+
+    figcaption {
+      font-size: 3vw;
+    }
+  }
+
+  @media (min-width: 501px) {
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    grid-row: 1fr;
+
+    img {
+      max-width: 25vw;
+      // width: 60%;
+    }
+  }
+
+  @include media-query($large-up) {
+    img {
+      max-width: 55%;
+    }
+  }
+
+  @include media-query($widescreen) {
+    img {
+      max-width: 45%;
+    }
   }
 
   figure {
@@ -17,31 +60,30 @@
     z-index: 1;
 
     img {
-      margin: 0 auto;
       height: auto;
       position: relative;
       border-radius: 10px;
     }
 
-    .img-1 {
-      width: 40%;
-    }
+    // .img-1 {
+    //   width: 40%;
+    // }
 
-    .img-2 {
-      width: 40%;
-    }
+    // .img-2 {
+    //   width: 40%;
+    // }
 
-    .img-3 {
-      width: 45%;
-    }
+    // .img-3 {
+    //   width: 45%;
+    // }
 
     figcaption {
-      margin: 0 auto;
       margin-top: 15px;
-      font-size: 1.25vw;
+      // font-size: 1.25vw;
       position: relative;
-      left: 30%;
+      // left: 30%;
       text-align: start;
+      line-height: 1.7;
     }
   }
 }

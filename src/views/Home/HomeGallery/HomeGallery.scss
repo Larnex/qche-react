@@ -1,0 +1,136 @@
+@import "../../../styles/config/config.scss";
+
+.slide--3 {
+  .slide__inner {
+    .slide__relative--container {
+      @include media-query($large-up) {
+        padding-left: 7.5vw;
+        padding-right: 0;
+        column-gap: 100px;
+      }
+    }
+  }
+}
+
+.slide__inner {
+  .slide__relative--container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    @include media-query($large-up) {
+      p {
+        text-align: left;
+      }
+    }
+
+    h1 {
+      font-weight: 400;
+      margin-bottom: 20px;
+
+      @include media-query($medium-up) {
+        font-size: 4vw;
+      }
+
+      @include media-query($large-up) {
+        align-self: center;
+        font-size: 2.5vw;
+      }
+
+      @include media-query($widescreen) {
+        font-size: 2vw;
+      }
+    }
+
+    figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      @include media-query($medium-up) {
+        align-items: start;
+      }
+
+      figcaption {
+        margin-top: 15px;
+      }
+    }
+
+    img {
+      max-width: 25vw;
+      height: auto;
+      border-radius: 10px;
+      // margin-bottom: 10px;
+    }
+
+    .grid__img {
+      display: grid;
+      // gap: 30px;
+      place-items: start;
+    }
+
+    @media (max-width: 500px) {
+      .grid__img {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, minmax(240px, 1fr));
+        place-items: center;
+
+        figure {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          figcaption {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 501px) {
+      .grid__img {
+      }
+    }
+
+    @include media-query($large-up) {
+      padding-top: 200px;
+      justify-content: start;
+
+      img {
+        max-width: 60%;
+      }
+    }
+
+    @include media-query($widescreen) {
+      img {
+        max-width: 55%;
+      }
+    }
+  }
+}
+
+@include media-query($medium-up) {
+  .slide--3 {
+    .slide__inner {
+      .slide__relative--container {
+        flex-direction: row;
+
+        .grid__img {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@include media-query($medium-down) {
+  .slide--3 .slide__inner .slide__relative--container {
+    flex-direction: column;
+  }
+}

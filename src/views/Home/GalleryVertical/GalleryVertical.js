@@ -6,7 +6,7 @@ import "./GalleryVertical.scss";
 
 const GalleryVertical = () => {
   return (
-    <div className="grid-column-3">
+    <div className="grid-column-3 slide">
       <figure>
         <img src={Oliver} alt="Oliver" className="img img-1"></img>
         <figcaption>

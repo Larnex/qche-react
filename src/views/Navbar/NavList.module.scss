@@ -1,0 +1,51 @@
+@import "../../styles/config/config.scss";
+
+.nav {
+  position: relative;
+  padding-left: 24px;
+
+  @include media-query($medium-down) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    opacity: 0;
+
+    &.open {
+      pointer-events: auto;
+    }
+  }
+
+  @include media-query($large-up) {
+    grid-row: 2/3;
+    // place-self: center;
+    pointer-events: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 3vw;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px;
+    text-decoration: none;
+
+    @include media-query($large-up) {
+      font-size: 0.9vw;
+    }
+  }
+}

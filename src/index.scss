@@ -1,8 +1,10 @@
+@import "./styles/config/config.scss";
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Helvetica";
+  font-family: futura-pl, sans-serif;
   font-weight: 400;
   color: white;
   overflow-x: hidden;
@@ -14,14 +16,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-h1 {
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem) !important;
-}
-
-p {
-  font-size: calc(16px + 6 * ((100vw - 320px) / 680)) !important;
 }
 
 /* ===== CANVAS ===== */
@@ -38,27 +32,6 @@ p {
     right: 0 !important;
   }
 }
-
-// Progress bar
-// .progress-bar {
-//   // width: 90%;
-//   // padding: 0 5%;
-//   //   margin: 0 auto;
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   height: 20%;
-
-//   .pb-outer {
-//     width: 100%;
-//     background: rgb(228, 0, 0);
-//     .inner-pb {
-//       width: 2px;
-//       height: 2px;
-//       background: #fff;
-//     }
-//   }
-// }
 
 progress {
   position: fixed;
@@ -84,74 +57,47 @@ progress::-moz-progress-bar {
   background-attachment: fixed;
 }
 
-// .app-home {
-//   section {
-//     display: grid;
-//     height: 100vh !important;
-//     width: 100vw;
+h1 {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
 
-//     place-content: center;
-//     text-align: center;
+  @include media-query($small) {
+    font-size: 4.5vw;
+  }
 
-//     &:nth-child(odd) {
-//       background: #222;
-//       color: #fff;
-//     }
+  @include media-query($medium-up) {
+    font-size: 4vw;
+  }
 
-//     &:nth-child(even) {
-//       background: #fff;
-//       color: #222;
-//     }
+  @include media-query($large-up) {
+    align-self: center;
+    font-size: 2.5vw;
+  }
 
-//     > p {
-//       padding: 5px;
-//     }
-//   }
-
-//   .home {
-//     &__gallery {
-//       height: auto;
-//       position: relative;
-//       z-index: 1000;
-//       width: 100%;
-
-//       .gallery {
-//         &__wrapper {
-//           display: flex;
-//           min-height: 100vh;
-//           padding: 10vh 0;
-
-//           align-items: center;
-//           flex-wrap: nowrap;
-//         }
-
-//         }
-//       }
-//     }
-//   }
-// }
-
-// #main {
-//   display: flex;
-//   white-space: nowrap;
-//   position: relative;
-//   height: 100vh;
-//   width: 100%;
-//   z-index: 5;
-// }
-.gallery__wrapper {
-  display: flex;
-  min-height: 100vh;
-  padding: 10vh 0;
+  @include media-query($widescreen) {
+    font-size: 2vw;
+    width: 100%;
+  }
 }
 
-.gallery-card {
-  // margin: 0 15vw;
-  width: 30vw !important;
-  height: 30vw !important;
+p {
+  @include media-query($small) {
+    font-size: 2.7vw;
+  }
 
-  background: white;
-  border: solid 5px rebeccapurple;
+  @include media-query($medium-up) {
+    font-size: 1.8vw;
+  }
 
-  z-index: 1;
+  @include media-query($large-up) {
+    font-size: 1.25vw;
+  }
+
+  @include media-query($widescreen) {
+    font-size: 1.1vw;
+  }
 }

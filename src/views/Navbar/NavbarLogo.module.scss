@@ -1,0 +1,32 @@
+@import "../../styles/config/config.scss";
+.logo {
+  grid-row: 1/2;
+  align-self: center;
+  display: flex;
+  align-items: center;
+
+  a {
+    display: flex;
+    font-size: 3.1em;
+    color: white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: red;
+    }
+  }
+  svg {
+    vertical-align: middle;
+  }
+
+  img {
+    height: auto;
+    width: 7em;
+    margin: 0 37px;
+    padding: 20px 0;
+
+    @include media-query($medium-down) {
+      margin-left: 7.5vw;
+    }
+  }
+}

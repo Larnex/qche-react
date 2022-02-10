@@ -1,0 +1,140 @@
+@import "../../../styles/config/config.scss";
+
+.slide--8 {
+  .slide__content {
+    .slide__relative--container {
+      @include media-query($small) {
+        justify-content: space-evenly;
+      }
+
+      @include media-query($medium-up) {
+        justify-content: center;
+      }
+
+      @include media-query($large-up) {
+        justify-content: start;
+      }
+
+      h1 {
+        display: block;
+        font-weight: 400;
+        margin-bottom: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        @include media-query($small) {
+          font-size: 4.5vw;
+        }
+
+        @include media-query($medium-up) {
+          font-size: 4vw;
+        }
+
+        @include media-query($large-up) {
+          align-self: center;
+          font-size: 2.5vw;
+        }
+
+        @include media-query($widescreen) {
+          font-size: 2vw;
+          width: 100%;
+        }
+      }
+
+      .container--text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include media-query($medium-up) {
+          flex-direction: row;
+        }
+
+        .container--img {
+          max-width: 100%;
+          position: relative;
+          text-align: center;
+
+          img {
+            margin-bottom: 0;
+            max-width: 70%;
+
+            @include media-query($small) {
+              max-width: 50%;
+              width: auto;
+            }
+          }
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 20px;
+
+          @include media-query($medium-up) {
+            max-width: 50%;
+            justify-content: space-between;
+            // align-items: center;
+
+            &:first-child {
+              margin-right: 5%;
+            }
+
+            &:last-child {
+              display: grid;
+            }
+          }
+
+          p,
+          ul > li {
+            @include media-query($small) {
+              font-size: 2.7vw;
+            }
+
+            @include media-query($medium-up) {
+              font-size: 1.8vw;
+            }
+
+            @include media-query($large-up) {
+              font-size: 1.25vw;
+            }
+
+            @include media-query($widescreen) {
+              font-size: 1.1vw;
+            }
+          }
+
+          h3 {
+            display: block;
+            font-weight: 400;
+            margin-bottom: 20px;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            @media (max-width: 500px) {
+              font-size: 13px;
+            }
+            @include media-query($small) {
+              font-size: 4vw;
+            }
+
+            @include media-query($medium-up) {
+              font-size: 3.5vw;
+            }
+
+            @include media-query($large-up) {
+              font-size: 2vw;
+            }
+
+            @include media-query($widescreen) {
+              font-size: 1.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

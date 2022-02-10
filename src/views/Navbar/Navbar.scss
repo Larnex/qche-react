@@ -1,68 +1,35 @@
-nav {
+@import "../../styles/config/config.scss";
+
+.header {
   position: fixed;
-  z-index: 9999;
-  height: 60px;
   width: 100%;
-}
+  // min-height: 50px;
+  max-height: 72px;
+  z-index: 9998;
+  background: #111;
 
-.list {
-  list-style-type: none;
-  background: transparent;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.main-link {
-  border-bottom: none;
-}
-
-.items {
-  margin-right: 20px;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #f1f1f1;
-  cursor: pointer;
-
-  a {
-    text-decoration: none;
-    color: #fff;
+  @include media-query($medium-down) {
+    background: $black;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
   }
 
-  &.active {
-    border-bottom: 3px solid red;
+  @include media-query($large-up) {
+    max-height: 200px;
   }
-}
 
-.btn {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 7px;
-  padding: 5px;
-  color: #000;
-  font-size: 18px;
-}
-
-@media screen and (max-width: 1200px) {
-  .list {
-    flex-direction: column;
-    height: auto;
-  }
-  .items:nth-child(1) {
-    border-top: 1px solid rgba(255, 255, 255, 0.555);
-    margin-top: 50px;
-  }
-  .items {
+  &__wrapper {
+    position: relative;
+    padding-right: 24px;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.555);
-    text-align: center;
-    margin-right: 0px;
-    padding: 20px 0;
-  }
-  .btn {
-    display: block;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+
+    @include media-query($large-up) {
+      // grid-template-columns: 10% 80% 10%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
   }
 }

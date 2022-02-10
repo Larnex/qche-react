@@ -1,53 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HomeIntro from "../HomeIntro/HomeIntro";
 import HomeAbout from "../HomeAbout/HomeAbout";
 import "./HomePage.scss";
-import bg from "../../../assets/Główna_grafika_quantum.png";
 import HomeGallery from "../HomeGallery/HomeGallery";
 import GalleryVertical from "../GalleryVertical/GalleryVertical";
 import HomeCybersecurity from "../HomeCybersecurity/HomeCybersecurity";
 import HomePartners from "../HomePartnerts/HomePartners";
 import Blog from "../Blog/Blog";
 import HomePartnership from "../HomePartnership/HomePartnership";
+import HomeDonate from "../HomeDonate/HomeDonate";
+import HomeContact from "../HomeContact/HomeContact";
+import Loading from "../../Loading/Loading";
+import useLoading from "../../../utils/hooks/useLoading";
 
-const HomePage = () => {
+const HomePage = (props) => {
   let styles = {
     transform: "scaleX(-1)",
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [isLoading, setLoading] = useState(false);
+
+  window.onload = () => setLoading(true);
+
+  useLoading(!isLoading);
+
   return (
-    <main className="scroll">
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-right">
-            <HomeIntro img={bg} />
-            <HomeAbout img={bg} reverse={styles} />
-            <HomeGallery img={bg} />
+    <div>
+      <Loading></Loading>
+      <main className="scroll">
+        <section className="horizontal">
+          <div className="pin-wrap">
+            <div className="animation-wrap to-right">
+              <HomeIntro img={props.img} />
+              <HomeAbout img={props.img} reverse={styles} />
+              <HomeGallery img={props.img} />
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="blank" id="vertical">
-        <GalleryVertical></GalleryVertical>
-      </section>
+        </section>
+        <section className="blank" id="vertical">
+          <GalleryVertical></GalleryVertical>
+        </section>
 
-      <section className="horizontal">
-        <div className="pin-wrap">
-          <div className="animation-wrap to-right">
-            <HomeCybersecurity img={bg} />
-            <HomePartners img={bg} reverse={styles} />
-            <Blog img={bg} />
-            <HomePartnership img={bg} reverse={styles}></HomePartnership>
+        <section className="horizontal">
+          <div className="pin-wrap">
+            <div className="animation-wrap to-right">
+              <HomeCybersecurity img={props.img} />
+              <HomePartners img={props.img} reverse={styles} />
+              <Blog img={props.img} />
+              <HomeDonate img={props.img} reverse={styles}></HomeDonate>
+              <HomePartnership img={props.img}></HomePartnership>
+              <HomeContact img={props.img} reverse={styles}></HomeContact>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* <div className="progress-bar">
-          <div className="pb-outer">
-            <div className="inner-pb"></div>
-          </div>
-        </div> */}
-      </section>
-
-      <progress max="100" value="0"></progress>
-    </main>
+        <progress max="100" value="0"></progress>
+      </main>
+    </div>
   );
 };
 

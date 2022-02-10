@@ -1,0 +1,28 @@
+section.footer-slide {
+  height: 100%;
+  width: 100%;
+  background: #111111;
+  color: white;
+
+  .slide--relative__container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 7% 0;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+
+    ul > li {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: red;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+}

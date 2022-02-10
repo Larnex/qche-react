@@ -6,9 +6,11 @@ const HomePartners = (props) => {
   return (
     <section className="slide slide--5 js-slide item" id="section4">
       <div className="slide__inner">
-        {/* <div className="slide__content">
+        <div className="slide__content">
           <div className="slide__relative--container">
-            <h1 className="js-transition-title">NASI PARTNERZY</h1>
+            <div className="title__container">
+              <h1 className="js-transition-title">NASI PARTNERZY</h1>
+            </div>
 
             <div className="container--text">
               <div className="container--img">
@@ -16,7 +18,7 @@ const HomePartners = (props) => {
               </div>
 
               <div className="text">
-                <h1>UNIWERSYTET GDAŃSKI</h1>
+                <h3>UNIWERSYTET GDAŃSKI</h3>
                 <p>
                   Współpraca QCHE i Uniwersytetu Gdańskeigo opiera się o
                   działania mające na celu upowszechnienie, wspieranie i
@@ -29,7 +31,7 @@ const HomePartners = (props) => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div className="slide__img js-transition-img">
           <figure className="js-transition-img__inner">

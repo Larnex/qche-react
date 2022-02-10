@@ -18,15 +18,11 @@ const useLoading = (start) => {
       .to("#bar4", { duration: 0.3, width: "100%" }, "-=0.1")
       .to("#bar5", { duration: 0.3, width: "100%" }, "-=0.1")
       .to(
-        "#loading",
+        "#preload",
         { duration: 1, width: 0, height: 0, zIndex: -1, opacity: 0 },
         "-=0.3"
       )
       .timeScale(1);
-
-    return () => {
-      tl.current.kill();
-    };
   }, [start]);
 };
 
