@@ -14,12 +14,10 @@ import Loading from "../../Loading/Loading";
 import useLoading from "../../../utils/hooks/useLoading";
 import Progress from "../../Progress";
 import useScrollProgress from "../../../utils/hooks/useScrollProgress";
+import PartnersVertical from "../PartnersVertical/PartnersVertical";
+import PartnersVerticalCenter from "../PartnersVerticalCenter/PartnersVerticalCenter";
 
 const HomePage = (props) => {
-  let styles = {
-    transform: "scaleX(-1)",
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -39,25 +37,40 @@ const HomePage = (props) => {
         <section className="horizontal">
           <div className="pin-wrap">
             <div className="animation-wrap to-right">
-              <HomeIntro img={props.img} />
-              <HomeAbout img={props.img} reverse={styles} />
-              <HomeGallery img={props.img} />
+              <HomeIntro />
+              <HomeAbout />
+              <HomeGallery />
             </div>
           </div>
-        </section>
-        <section className="blank" id="vertical">
-          <GalleryVertical></GalleryVertical>
         </section>
 
         <section className="horizontal">
           <div className="pin-wrap">
             <div className="animation-wrap to-right">
-              <HomeCybersecurity img={props.img} />
-              <HomePartners img={props.img} reverse={styles} />
-              <Blog img={props.img} />
-              <HomeDonate img={props.img} reverse={styles}></HomeDonate>
-              <HomePartnership img={props.img}></HomePartnership>
-              <HomeContact img={props.img} reverse={styles}></HomeContact>
+              <GalleryVertical></GalleryVertical>
+
+              <HomeCybersecurity />
+              <HomePartners />
+            </div>
+          </div>
+        </section>
+
+        <section className="horizontal">
+          <div className="pin-wrap">
+            <div className="animation-wrap to-right">
+              <PartnersVerticalCenter></PartnersVerticalCenter>
+            </div>
+          </div>
+        </section>
+
+        <section className="horizontal">
+          <div className="pin-wrap">
+            <div className="animation-wrap to-right">
+              <PartnersVertical></PartnersVertical>
+
+              <HomeDonate></HomeDonate>
+              <HomePartnership></HomePartnership>
+              <HomeContact></HomeContact>
             </div>
           </div>
         </section>

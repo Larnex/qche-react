@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useScrollProgress from "../../../utils/hooks/useScrollProgress";
 import Progress from "../../Progress";
+import BgFooter from "../BgFooter";
 import FooterNavbar from "../Navbar/FooterNavbar";
 import "./Rodo.scss";
 
@@ -17,9 +18,14 @@ const PrivatePolicy = () => {
       <section className="footer-slide slide">
         <div className="slide__content">
           <div className="slide--relative__container">
+            <br />
+            <br />
+            <br />
+
             <div className="title__container">
               <h1 className="js-transition-title">Polityka Prywatności</h1>
             </div>
+            <br />
             <p>
               Poniższa Polityka Prywatności określa{" "}
               <strong>
@@ -42,7 +48,7 @@ const PrivatePolicy = () => {
               <li>
                 <strong>Serwis</strong>- serwis internetowy "FUNDACJA QUANTUM
                 CYBERSECURITY HUB EUROPE" działający pod adresem
-                <a href="https://qche.ngo">https://qche.ngo</a>
+                <a href="https://qche.ngo"> https://qche.ngo</a>
               </li>
               <li>
                 <strong>Serwis zewnętrzny</strong> - serwisy internetowe
@@ -856,6 +862,7 @@ const PrivatePolicy = () => {
             </ul>
           </div>
         </div>
+        <BgFooter></BgFooter>
       </section>
       <Progress></Progress>
     </div>

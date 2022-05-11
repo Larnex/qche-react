@@ -1,7 +1,21 @@
 @import "../../../styles/config/config.scss";
 
 .slide--5 {
+  .slide__inner {
+    @include media-query($medium-down) {
+      height: auto;
+    }
+  }
   .slide__content {
+    // position: relative;
+    @include media-query($medium-up) {
+      top: 30%;
+    }
+
+    @include media-query($large-up) {
+      top: 20%;
+    }
+
     .slide__relative--container {
       @include media-query($small) {
         justify-content: center;
@@ -9,10 +23,12 @@
 
       @include media-query($medium-up) {
         justify-content: center;
+        // padding-top: 15%;
       }
 
       @include media-query($large-up) {
         justify-content: start;
+        // padding-top: 12.5%;
       }
 
       h1 {
@@ -24,49 +40,67 @@
         left: 0;
 
         @include media-query($small) {
-          font-size: 4.5vw;
+          font-size: $fs-small-h1;
         }
 
         @include media-query($medium-up) {
-          font-size: 4vw;
+          font-size: $fs-medium-h1;
         }
 
         @include media-query($large-up) {
-          align-self: center;
-          font-size: 2.5vw;
+          font-size: $fs-large-h1;
         }
 
         @include media-query($widescreen) {
-          font-size: 2vw;
+          font-size: $fs-widescreen-h1;
           width: 100%;
         }
       }
 
       .container--text {
         position: relative;
-        display: flex;
-        flex-direction: row;
+
+        display: grid;
+        grid-template-columns: 0.2fr 0.8fr;
+        margin-bottom: 20px;
 
         @include media-query($small) {
-          flex-direction: column;
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.2fr 0.8fr;
+          row-gap: 30px;
         }
 
         .container--img {
-          max-width: 100%;
           position: relative;
-          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include media-query($large-up) {
+            margin-right: 30px;
+          }
 
           img {
             margin-bottom: 0;
-            max-width: 70%;
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+
+            &.UG {
+              width: 30%;
+            }
 
             @include media-query($large-down) {
-              max-width: 100%;
+              width: 100%;
             }
 
             @include media-query($small) {
-              max-width: 35%;
-              width: auto;
+              width: 35%;
+
+              &.UG {
+                width: 15%;
+              }
             }
           }
         }
@@ -78,19 +112,19 @@
 
           p {
             @include media-query($small) {
-              font-size: 2.7vw;
+              font-size: $fs-small-p;
             }
 
             @include media-query($medium-up) {
-              font-size: 1.8vw;
+              font-size: $fs-medium-p;
             }
 
             @include media-query($large-up) {
-              font-size: 1.25vw;
+              font-size: $fs-large-p;
             }
 
             @include media-query($widescreen) {
-              font-size: 1.1vw;
+              font-size: $fs-widescreen-p;
             }
           }
 
@@ -107,19 +141,19 @@
             }
 
             @include media-query($small) {
-              font-size: 4vw;
-            }
-
-            @include media-query($medium-up) {
               font-size: 3.5vw;
             }
 
+            @include media-query($medium-up) {
+              font-size: 3vw;
+            }
+
             @include media-query($large-up) {
-              font-size: 2vw;
+              font-size: 1.75vw;
             }
 
             @include media-query($widescreen) {
-              font-size: 1.5vw;
+              font-size: 1.25vw;
             }
           }
         }

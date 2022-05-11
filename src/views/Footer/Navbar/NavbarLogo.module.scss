@@ -1,17 +1,44 @@
+@import "../../../styles/config/config.scss";
+
 .logo__container {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 
   a {
     display: inline;
-    text-align: center;
+    text-align: start;
+    margin-left: 37px;
   }
 
   img {
-    width: 20%;
+    width: 7em;
+  }
+
+  .logo {
+    display: flex;
+    font-size: 3.1em;
+    color: white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: red;
+    }
+  }
+  svg {
+    vertical-align: middle;
+  }
+
+  img {
+    height: auto;
+    width: 7em;
+    padding: 20px 0;
+
+    @include media-query($medium-down) {
+      margin-left: 7.5vw;
+    }
   }
 }

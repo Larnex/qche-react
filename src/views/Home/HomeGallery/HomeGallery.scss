@@ -3,22 +3,57 @@
 .slide--3 {
   .slide__inner {
     .slide__relative--container {
+      // align-content: center;
+      @include media-query($large-up) {
+        display: grid;
+        grid-template-columns: 40% 50%;
+        // place-items: center;
+      }
+
       @include media-query($large-up) {
         padding-left: 7.5vw;
         padding-right: 0;
         column-gap: 100px;
+      }
+
+      .slide__text {
+        position: relative;
+        white-space: normal;
+        text-align: justify;
+
+        @include media-query($small) {
+          font-size: $fs-small-p;
+        }
+
+        @include media-query($medium-up) {
+          font-size: $fs-medium-p;
+        }
+
+        @include media-query($large-up) {
+          padding: 0 17.5%;
+
+          font-size: $fs-large-p;
+        }
+
+        @include media-query($widescreen) {
+          font-size: $fs-widescreen-p;
+          padding: 0 20%;
+        }
       }
     }
   }
 }
 
 .slide__inner {
+  .slide__content {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
   .slide__relative--container {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     gap: 20px;
 
     @include media-query($large-up) {
@@ -27,22 +62,8 @@
       }
     }
 
-    h1 {
-      font-weight: 400;
-      margin-bottom: 20px;
-
-      @include media-query($medium-up) {
-        font-size: 4vw;
-      }
-
-      @include media-query($large-up) {
-        align-self: center;
-        font-size: 2.5vw;
-      }
-
-      @include media-query($widescreen) {
-        font-size: 2vw;
-      }
+    @include media-query($small) {
+      justify-content: center;
     }
 
     figure {
@@ -64,12 +85,10 @@
       max-width: 25vw;
       height: auto;
       border-radius: 10px;
-      // margin-bottom: 10px;
     }
 
     .grid__img {
       display: grid;
-      // gap: 30px;
       place-items: start;
     }
 
@@ -92,13 +111,8 @@
       }
     }
 
-    @media (min-width: 501px) {
-      .grid__img {
-      }
-    }
-
     @include media-query($large-up) {
-      padding-top: 200px;
+      // padding-top: 150px;
       justify-content: start;
 
       img {
@@ -123,6 +137,27 @@
         .grid__img {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          // place-items: center;
+        }
+      }
+    }
+  }
+}
+
+@include media-query($small) {
+  .slide--3 {
+    .slide__inner {
+      .slide__relative--container {
+        flex-direction: row;
+
+        .grid__img {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          place-items: center;
+
+          figcaption {
+            text-align: center;
+          }
         }
       }
     }
@@ -134,3 +169,90 @@
     flex-direction: column;
   }
 }
+
+.slide--3 {
+  .slide__inner {
+    .slide__relative--container {
+      .slide__text--title {
+        // font-weight: 400;
+        // margin-bottom: 20px;
+        // // text-align: center;
+        // width: 100%;
+        // white-space: nowrap;
+        // padding-right: 0.1em;
+
+        // @include media-query($medium-up) {
+        //   font-size: 270%;
+        // }
+
+        // @include media-query($widescreen) {
+        //   font-size: 300%;
+        // }
+
+        // @include media-query($medium-down) {
+        //   font-size: 4vw;
+        // }
+
+        display: block;
+        font-weight: 400;
+        margin-bottom: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        @include media-query($small) {
+          font-size: $fs-small-h1;
+        }
+
+        @include media-query($medium-up) {
+          font-size: $fs-medium-h1;
+        }
+
+        @include media-query($large-up) {
+          align-self: center;
+          font-size: $fs-large-h1;
+        }
+
+        @include media-query($widescreen) {
+          font-size: $fs-widescreen-h1;
+          width: 100%;
+        }
+      }
+
+      p {
+        @include media-query($medium-up) {
+          padding-right: 1em;
+        }
+      }
+    }
+  }
+}
+
+// .slide--7,
+// .slide--8,
+// .slide--9 {
+//   .slide__inner {
+//     @include media-query($medium-down) {
+//       height: auto;
+//     }
+//   }
+//   .slide__content {
+//     position: relative;
+
+//     .slide__relative--container {
+//       @include media-query($small) {
+//         justify-content: center;
+//       }
+
+//       @include media-query($medium-up) {
+//         justify-content: center;
+//         padding-top: 20%;
+//       }
+
+//       @include media-query($large-up) {
+//         justify-content: start;
+//         padding-top: 20%;
+//       }
+//     }
+//   }
+// }

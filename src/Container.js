@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useLocomotiveScroll from "./utils/hooks/useLocomotiveScroll";
 import HomePage from "./views/Home/HomePage/HomePage";
 import Navbar from "./views/Navbar/Navbar";
-import navigation from "./data/data";
+import Navigation from "./data/data.js";
+import Background from "./Background";
+import { Popup } from "./views/Popup/Popup";
 
 const Container = (props) => {
+  let navigate = Navigation();
+
   const [isLoading, setLoading] = useState(false);
 
   window.onload = () => setLoading(true);
@@ -13,7 +17,9 @@ const Container = (props) => {
 
   return (
     <div>
-      <Navbar items={navigation} logo={props.logo}></Navbar>
+      <Popup></Popup>
+      <Navbar items={navigate} logo={props.logo}></Navbar>
+      <Background></Background>
       <HomePage img={props.img} />
     </div>
   );

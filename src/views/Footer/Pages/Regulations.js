@@ -19,9 +19,14 @@ export const Regulations = () => {
       <section className="footer-slide slide">
         <div className="slide__content">
           <div className="slide--relative__container">
+            <br />
+            <br />
+            <br />
             <div className="title__container">
               <h1 className="js-transition-title">Regulamin strony www </h1>
             </div>
+            <br />
+
             <p>Regulamin serwisu.</p>
             <br />
             <br />

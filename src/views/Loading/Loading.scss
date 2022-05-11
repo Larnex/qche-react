@@ -10,8 +10,7 @@
   z-index: 9999;
   #logo_preload {
     position: absolute;
-    width: 80%;
-    margin: 0 auto;
+    width: 20%;
     height: 100%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -19,10 +18,7 @@
     background-image: url("../../assets/Logo_QCHE_biale.png");
     background-repeat: no-repeat;
     background-position: center;
-
-    @media (max-width: 989px) {
-      background-size: contain;
-    }
+    background-size: contain;
 
     #mask {
       position: absolute;

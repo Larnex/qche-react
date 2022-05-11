@@ -4,6 +4,25 @@
   align-self: center;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @include media-query($medium-down) {
+    justify-content: start;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .switcher {
+    margin: 0 37px;
+
+    @include media-query($small) {
+      margin: 0 10px;
+    }
+  }
 
   a {
     display: flex;
@@ -24,6 +43,10 @@
     width: 7em;
     margin: 0 37px;
     padding: 20px 0;
+
+    @include media-query($small) {
+      margin: 0 10px;
+    }
 
     @include media-query($medium-down) {
       margin-left: 7.5vw;

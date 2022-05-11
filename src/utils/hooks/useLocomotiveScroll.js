@@ -10,7 +10,7 @@ const useLocoScroll = (start) => {
     if (!start) return;
 
     var tl = new gsap.timeline();
-    tl.to("#mask", { duration: 2, height: 0, opacity: 0 })
+    tl.to("#mask", { duration: 1, height: 0, opacity: 0 })
       .to("#logo_preload", { duration: 0.3, opacity: 0 })
       .to("#bars", { duration: 0.3, opacity: 1 }, "-=0.2")
       .to("#bar1", { duration: 0.3, width: "100%" }, "-=0.1")
@@ -18,11 +18,7 @@ const useLocoScroll = (start) => {
       .to("#bar3", { duration: 0.3, width: "100%" }, "-=0.1")
       .to("#bar4", { duration: 0.3, width: "100%" }, "-=0.1")
       .to("#bar5", { duration: 0.3, width: "100%" }, "-=0.1")
-      .to(
-        "#preload",
-        { duration: 1, width: 0, height: 0, zIndex: -1, opacity: 0 },
-        "-=0.3"
-      )
+      .to("#preload", { duration: 1, zIndex: -1, opacity: 0 }, "-=0.3")
       .timeScale(1);
 
     const horizontalSections = gsap.utils.toArray("section.horizontal");
@@ -61,29 +57,75 @@ const useLocoScroll = (start) => {
       });
     });
 
-    const element = document.querySelector("#section3");
-    const bodyRect = document.body.getBoundingClientRect(),
-      elemRect = element.getBoundingClientRect(),
-      offset = elemRect.top - bodyRect.top;
+    let allWidth = [];
+
+    function getSlideWidth(element) {
+      console.log("element:", element);
+      // element = document.querySelector("#section-vertical");
+      const bodyRect = document.body.getBoundingClientRect(),
+        elemRect = element.getBoundingClientRect().right;
+
+      allWidth.push(elemRect);
+      console.log(elemRect);
+    }
+
+    const slidesss = document.querySelectorAll(".slide");
+
+    slidesss.forEach((value, i) => {
+      getSlideWidth(value);
+    });
+
+    // const element = document.querySelector("#section-vertical");
+    // const bodyRect = document.body.getBoundingClientRect(),
+    //   elemRect = element.getBoundingClientRect(),
+    //   offset = elemRect.top - bodyRect.top;
+
+    const verticalHeight = gsap.getProperty("#section-vertical", "height");
+    console.log("verticalHeight:", verticalHeight);
 
     const slides = gsap.utils.toArray(".slide");
+    // const slide = slides[3];
+    // let position;
+
+    // if (slide.clientWidth > 989) {
+    //   position = slide.getBoundingClientRect().right;
+    // } else {
+    //   position = slide.getBoundingClientRect().top;
+    // }
 
     slides.forEach((slide, i) => {
       ScrollTrigger.create({
         start: 0,
-        end:
-          i < 3
-            ? i * window.innerWidth + window.innerWidth
-            : offset + (i - 3) * window.innerWidth,
-
+        end: () => {
+          console.log("END", slide, i);
+          if (i < 2) {
+            return (
+              i * window.innerWidth + window.innerWidth - window.innerWidth / 2
+            );
+          } else if (i < 4) {
+            return (
+              (i + 1) * window.innerWidth +
+              verticalHeight -
+              window.innerWidth / 2
+            );
+          } else {
+            return (
+              (i + 1) * window.innerWidth +
+              verticalHeight * 3 -
+              window.innerWidth / 2
+            );
+          }
+        },
         onLeave: () => {
+          console.log("ONLEAVE", slide, i);
           if (i !== 0) {
             gsap.to(navLinks, {
               scale: 1,
               duration: 0.2,
               borderBottom: "none",
             });
-            gsap.to(navLinks[i < 3 ? i : i - 1], {
+
+            gsap.to(navLinks[i], {
               duration: 0.2,
               scale: 1.1,
               borderBottom: "3px solid red",
@@ -97,22 +139,26 @@ const useLocoScroll = (start) => {
           }
         },
         onEnterBack: () => {
+          console.log("ONENTERBACK", slide, i);
+
+          if ((slide.id = "section0")) {
+            navLinks.forEach((v, i) => (v.style.borderBottom = "none"));
+          }
+
           if (i !== 0) {
-            gsap.to(navLinks[i < 3 ? i + 1 : i], {
+            gsap.to(navLinks[i], {
               scale: 1,
               borderBottom: "none",
             });
 
-            gsap.to(navLinks[i < 3 ? i : i - 1], {
+            gsap.to(navLinks[i - 1], {
               duration: 0.2,
               scale: 1.1,
               borderBottom: "3px solid red",
             });
           } else {
             gsap.to(navLinks[i], {
-              duration: 0.2,
-              scale: 1.1,
-              borderBottom: "3px solid red",
+              borderBottom: "none",
             });
 
             gsap.to(navLinks[i + 1], { scale: 1, borderBottom: "none" });
@@ -123,36 +169,41 @@ const useLocoScroll = (start) => {
 
     navLinks.forEach((link, i) => {
       link.addEventListener("click", (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
-        // navLinks.forEach((val, j) => {
-        //   if (j === i) return;
+        const navLink = e.target;
 
-        //   navLinks[j].style.borderBottom = "none";
-        // });
+        navLinks.forEach((val, j) => {
+          if (j === i) return;
 
-        // navLink.style.borderBottom = "3px solid red";
-
-        gsap.to(window, {
-          duration: 1,
-
-          scrollTo:
-            i < 2
-              ? i * window.innerWidth + window.innerWidth
-              : offset + (i - 2) * window.innerWidth,
+          navLinks[j].style.borderBottom = "none";
         });
 
-        if (i !== 0) {
-          gsap.to(navLinks, { scale: 1, borderBottom: "none" });
-          gsap.to(navLinks[i], {
-            scale: 1.1,
-            borderBottom: "3px solid red",
-          });
-        }
+        navLink.style.borderBottom = "3px solid red";
+
+        gsap.to(window, {
+          duration: 0.1,
+
+          scrollTo: () => {
+            console.log("SCROLLTO:", link, i);
+
+            if (i < 2) {
+              return i * window.innerWidth + window.innerWidth;
+            } else if (i < 4) {
+              return (i + 1) * window.innerWidth + verticalHeight;
+            } else {
+              return (i + 1) * window.innerWidth + verticalHeight * 3;
+            }
+          },
+        });
+
+        gsap.to(navLinks, { scale: 1, borderBottom: "none" });
+        gsap.to(navLinks[i], {
+          scale: 1.1,
+          borderBottom: "3px solid red",
+        });
       });
     });
-
-    if (!start) return;
 
     gsap.to("progress", {
       value: 100,

@@ -3,13 +3,12 @@
 .slide--4 {
   .slide__content {
     position: absolute;
-    top: 0;
     height: 100%;
     // width: 85%;
 
     .slide__relative--container {
       justify-content: center;
-      align-items: center;
+      align-items: start;
 
       @include media-query($medium-up) {
         justify-content: center;
@@ -28,18 +27,21 @@
       top: 0;
       left: 0;
 
+      @include media-query($small) {
+        font-size: $fs-small-h1;
+      }
+
       @include media-query($medium-up) {
-        font-size: 4vw;
+        font-size: $fs-medium-h1;
       }
 
       @include media-query($large-up) {
-        align-self: center;
-        font-size: 2.5vw;
-        width: 100%;
+        font-size: $fs-large-h1;
       }
 
       @include media-query($widescreen) {
-        font-size: 2vw;
+        font-size: $fs-widescreen-h1;
+        width: 100%;
       }
     }
 
@@ -49,19 +51,19 @@
       text-align: justify;
 
       @include media-query($small) {
-        font-size: 2.7vw;
+        font-size: $fs-small-p;
       }
 
       @include media-query($medium-up) {
-        font-size: 1.8vw;
+        font-size: $fs-medium-p;
       }
 
       @include media-query($large-up) {
-        font-size: 1.25vw;
+        font-size: $fs-large-p;
       }
 
       @include media-query($widescreen) {
-        font-size: 1.1vw;
+        font-size: $fs-widescreen-p;
       }
     }
   }

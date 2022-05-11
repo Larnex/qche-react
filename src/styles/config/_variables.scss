@@ -18,6 +18,19 @@ $spacer-m: 16px;
 $spacer-l: 24px;
 $spacer-xl: 32px;
 
+// Fontsizes
+// fontsizes-title
+$fs-small-h1: 4.5vw;
+$fs-medium-h1: 4vw;
+$fs-large-h1: 2.5vw;
+$fs-widescreen-h1: 2vw;
+
+// fontsizes-paragraph
+$fs-small-p: 2.5vw;
+$fs-medium-p: 1.5vw;
+$fs-large-p: 1.05vw;
+$fs-widescreen-p: 1vw;
+
 //** Grid Breakpoints and Class Names **//
 //Do not change the variable names
 $grid-medium: 750px;

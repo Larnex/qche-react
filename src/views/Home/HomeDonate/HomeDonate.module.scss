@@ -1,4 +1,5 @@
 @import "../../../styles/config/config.scss";
+
 .subtitle {
   display: block;
   font-weight: 400;
@@ -12,18 +13,62 @@
   }
 
   @include media-query($small) {
-    font-size: 4vw;
-  }
-
-  @include media-query($medium-up) {
     font-size: 3.5vw;
   }
 
+  @include media-query($medium-up) {
+    font-size: 3vw;
+  }
+
   @include media-query($large-up) {
-    font-size: 2vw;
+    font-size: 1.75vw;
   }
 
   @include media-query($widescreen) {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
+  }
+}
+
+.title {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  @include media-query($small) {
+    font-size: $fs-small-h1;
+  }
+
+  @include media-query($medium-up) {
+    font-size: $fs-medium-h1;
+  }
+
+  @include media-query($large-up) {
+    font-size: $fs-large-h1;
+  }
+
+  @include media-query($widescreen) {
+    font-size: $fs-widescreen-h1;
+    width: 100%;
+  }
+}
+
+.text {
+  @include media-query($small) {
+    font-size: $fs-small-p;
+  }
+
+  @include media-query($medium-up) {
+    font-size: $fs-medium-p;
+  }
+
+  @include media-query($large-up) {
+    font-size: $fs-large-p;
+  }
+
+  @include media-query($widescreen) {
+    font-size: $fs-widescreen-p;
   }
 }

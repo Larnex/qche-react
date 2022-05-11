@@ -17,11 +17,15 @@ export const Rodo = () => {
       <section className="footer-slide slide">
         <div className="slide__content">
           <div className="slide--relative__container">
+            <br />
+            <br />
+            <br />
             <div className="title__container">
               <h1 className="js-transition-title">
                 Obowiązek informacyjny RODO
               </h1>
             </div>
+            <br />
             <p>
               Poniższa informacja stanowi zwięzły, zrozumiały i przejrzysty
               skrót informacji zamieszczonych w Polityce Prywatności odnośnie
