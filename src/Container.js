@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ParticlesComponent from "./Particles";
 import useLocomotiveScroll from "./utils/hooks/useLocomotiveScroll";
 import HomePage from "./views/Home/HomePage/HomePage";
 import Navbar from "./views/Navbar/Navbar";
@@ -15,7 +14,6 @@ const Container = (props) => {
   return (
     <div>
       <Navbar items={navigation} logo={props.logo}></Navbar>
-      <ParticlesComponent></ParticlesComponent>
       <HomePage img={props.img} />
     </div>
   );

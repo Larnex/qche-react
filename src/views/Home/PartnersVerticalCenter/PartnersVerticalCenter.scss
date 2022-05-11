@@ -1,0 +1,21 @@
+.slide__inner--height {
+  @media screen and (max-width: 989px) {
+    height: 150vh !important;
+    max-height: 150vh !important;
+  }
+}
+
+.slide__inner--height--110vh {
+  @media screen and (max-width: 989px) {
+    height: 110vh !important;
+    max-height: 110vh !important;
+  }
+}
+
+.slide__content--center {
+  top: 0;
+
+  @media screen and (max-width: 980px) {
+    // top: 20%;
+  }
+}

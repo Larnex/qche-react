@@ -1,0 +1,123 @@
+{
+  "popup-text": "We support Ukraine by creating a secure and encrypted space for organizations working together to communicate and coordinate humanitarian efforts.",
+  "popup-subtitle": "Find out how you can help:",
+  "navbar_1": "OUR MISSION",
+  "navbar_2": "TEAM",
+  "navbar_3": "QUANTUM CYBERSECURITY",
+  "navbar_4": "OUR PARTNERS",
+  "navbar_5": "BLOG",
+  "navbar_6": "SUPPORT QCHE",
+  "navbar_7": "COOPERATION",
+  "navbar_8": "CONTACT",
+  "slide_1": {
+    "text-1-row": "Quantum Cybersecurity Hub Europe Foundation was established on 20.01.2022 on the initiative of science and innovation enthusiasts.",
+    "text-2-row": "Our mission is to conduct research and scientific and development work and provide education, training, and humanitarian assistance in standard and quantum cybersecurity.",
+    "text-3-row": "QCHE Foundation is all about making humanitarian aid more effective and efficient. We develop and implement platforms and products based on quantum cyber security in the face of occurring and potential cybercrimes. As part of our activities, we train and send specialists to places affected by cyber attacks."
+  },
+
+  "slide_2": {
+    "title": "MEET THE TEAM",
+    "text": "A group of passionate and visionary individuals includes founding CEOs and scientists, researchers, and specialists in standard and quantum cyber security. The members of the Board of Directors work closely together, making every effort to combine business with the field of new quantum technologies in cybersecurity. Their goal is to commercialize research results and implement them into the economy.",
+    "team": {
+      "SZ": {
+        "name": "Sebastian Zimnol",
+        "position": "Founder and President of the Foundation",
+        "company": "WETOG PL"
+      },
+      "MP": {
+        "name": "Marcin Pawłowski, PhD",
+        "position": "Vice President of the Board of Directors",
+        "company": "University of Gdansk"
+      },
+      "OW": {
+        "name": "Oliver Weimann",
+        "position": "Board of Directors member",
+        "company": "WETOG GmbH"
+      },
+      "SG": {
+        "name": "Sven Göth",
+        "position": "Board of Directors member",
+        "company": "Futuriser GmbH"
+      },
+      "MW": {
+        "name": "Maciej Wierzbowski",
+        "position": "Board of Directors member",
+        "company": "Securino"
+      }
+    }
+  },
+
+  "slide_3": {
+    "text": "It is difficult to find another technology field in which the fundamental laws governing the universe translate so directly into practical solutions to significant problems as they do in quantum computing. The security of some communication protocols is based on the Heisenberg indeterminacy principle, while others are based on nonlocality. Quantum computers, on the other hand, use entanglement to perform operations impossible on their classical counterparts. Since these phenomena are counterintuitive to our intuition, so are their applications. Until recently, tasks performed using quantum technologies were considered impossible, particularly evident in the case of cyber security."
+  },
+
+  "slide_4": {
+    "UG": {
+      "subtitle": "University of Gdansk",
+      "text-1-row": "The cooperation between QCHE and the University of Gdańskeigo is based on activities aimed at popularizing, supporting and promoting research developing quantum technologies in the area of cybersecurity.",
+      "text-2-row": "Our common goal is to raise public awareness of cybersecurity and implement the latest technological solutions in the economy."
+    },
+    "ruhrHUB": {
+      "subtitle": "ruhrHUB",
+      "text-1-row": "The ruhrHUB is an initiative of the Ministry of Economics for Düsseldorf and cities in the Ruhr region to support regional startups and provide impetus for digitization for industry and smart cities. With International streamed events such as ruhrSUMMIT or ruhrSTARTUPWEEK or Challenge Pitches, networking and active matchings between industry and startups has always been a key concern. Thematically, one focus of the region is cyber security, which is why an intensive link and cooperation with QCHE is a significant gain for both sides."
+    },
+    "wetog": {
+      "subtitle": "WETOG",
+      "text-1-row": "WETOG enables communication and data exchange in a secure and GDPR-compliant manner while maintaining complete control over your data. Dispensing with multiple communication channels provides uniformity, security, and efficiency through an integrated collaborative platform. The revolutionary LIQRYPT encryption technology on which WETOG is based protects the information you share and blocks unauthorized access."
+    },
+    "ec3l": {
+      "subtitle": "EC3L",
+      "text-1-row": "With the innovative eLearning and knowledge community provided by EC3L as a SaaS solution companies and initiatives succeed in digital knowledge transfer. On the basis of the didactic concept of the learning taxonomy specific content is scalable and know-how carriers - internal as well as extremal - are enabled to share their knowledge. At the same time teams or departments could work together on acute challenges share the results with each other and preserve them in a comprehensible way for new employees. EC3L enables learning organizations."
+    },
+    "trustCerts": {
+      "subtitle": "TrustCerts",
+      "text-1-row": "TrustCerts is the European alternative for digital signature services. The completely self-sufficient blockchain technology was developed at the Institute for Internet Security and uses solely European infrastructure. Based on this innovative technology TrustCerts enables counterfeit-proof digital contracts to be concluded as well as the issuance of neutrally verifiable digital evidence which can be traced beyond a doubt by external third parties even in the printout. This makes use cases such as digital building passes or forgery-proof certificates or access controls that can be checked in real time at an unprecedented level of security a reality."
+    },
+    "futuriser": {
+      "subtitle": "FUTURISER",
+      "text-1-row": "We step up to rethink consulting and future-proof our clients. FUTURISER is a team of founders and corporate-experienced executives trained in consulting and innovation units and shaped by startups and entrepreneurship. With our FUTURISER method, an \"ASSOCIATIVE APPROACH\" we apply the experience from hundreds of consulting processes in various industries, specifically in the area of \"FUTURE BUSINESS MODELING\" and \"FUTURE PEOPLE ENABLING\"."
+    },
+    "quantumBusiness": {
+      "subtitle": "Quantum Business Europe",
+      "text-1-row": "Quantum Business Europe is a unique online event offering business leaders the keys to understanding the state of quantum technologies, evaluating their business's potential, and designing a clear quantum roadmap. By bringing together industry leaders, research teams, and early adopters, the event aims at bridging the gap between science, research, and business."
+    }
+  },
+  "slide_6": {
+    "subtitle": "QUANTUM CYBERSECURITY HUB EUROPE FOUNDATION BANK ACCOUNT",
+    "bank_name": "Bank: PKO Bank Polski SA.",
+    "bank_nr": "Account number: 59 1020 1811 0000 0402 0389 1827",
+    "bank_iban": "IBAN: PL 59 1020 1811 0000 0402 0389 1827",
+    "bank_bic": "BIC: BPKOPLPW",
+    "bank_title": "Title: Donation for statutory purposes of the Foundation"
+  },
+  "slide_7": {
+    "column_1": {
+      "title": "ENTERPRISES, ORGANIZATIONS, PUBLIC INSTITUTIONS",
+      "list_1": "Implementation of new technologies in daily work",
+      "list_2": "Conducting partner projects",
+      "list_3": "Finding new cyber security solutions in the industry",
+      "list_4": "Expanding knowledge about standard and quantum cyber security."
+    },
+    "column_2": {
+      "title": "TECHNOLOGY DEVELOPMENT",
+      "text": "QCHE Foundation takes action on a national and European scale. We are open to cooperation, which can support the foundation's activities, among others in the field of technology and sharing new quantum opportunities."
+    },
+    "footer": "We encourage you to contact us. We will be happy to hear about your ideas."
+  },
+  "slide_8": {
+    "subtitle": "QUANTUM CYBERSECURITY HUB EUROPE FOUNDATION",
+    "address": "Address: ul. Lęborska 3B 80-386 Gdańsk",
+    "email": "E-mail: ofice@qche.ngo"
+  },
+  "footer": {
+    "item-1": "Foundation notice",
+    "item-2": "GDPR",
+    "item-3": "Privacy policy",
+    "item-4": "Terms and conditions"
+  },
+  "Note": {
+    "title": "Foundation notice",
+    "subtitle_1": "1. Identification data of the foundation:",
+    "text_1": "Quantum Cybersecurity Hub Europe Foundation with its registered office in Gdańsk, ul. Lęborska 3B (80-386), entered in the register of associations, other social and professional organizations, foundations and independent public health institutions of the National Court Register maintained by the District Court Gdańsk Północ in Gdańsk, VII. Economic Division of the National Court Register, under number 0000944667, NIP number: 5842813019, REGON number: 52105582200000. "
+  }
+}

@@ -1,0 +1,38 @@
+.select {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      background: none;
+      color: rgba(255, 255, 255, 0.6);
+      outline: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      margin-top: 1px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      @media (max-width: 500px) {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .isActive {
+      color: rgba(255, 255, 255, 1);
+    }
+    .border {
+      display: inline-block;
+      position: relative;
+      min-height: 30px;
+      min-width: 1px;
+      background: #fff;
+    }
+  }
+}
